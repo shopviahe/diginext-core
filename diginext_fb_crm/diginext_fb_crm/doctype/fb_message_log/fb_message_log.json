@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "creation": "2026-03-25 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sender_psid",
+  "sender_name",
+  "page_config",
+  "received_at",
+  "section_message",
+  "message_text",
+  "message_id",
+  "section_crm",
+  "crm_lead",
+  "status",
+  "section_reply",
+  "reply_text",
+  "replied_at",
+  "replied_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "sender_psid",
+   "fieldtype": "Data",
+   "label": "Sender PSID",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sender_name",
+   "fieldtype": "Data",
+   "label": "Tên người gửi",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "page_config",
+   "fieldtype": "Link",
+   "label": "Facebook Page",
+   "options": "FB Page Config",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "received_at",
+   "fieldtype": "Datetime",
+   "label": "Thời gian nhận",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_message",
+   "fieldtype": "Section Break",
+   "label": "Nội dung message"
+  },
+  {
+   "fieldname": "message_text",
+   "fieldtype": "Long Text",
+   "label": "Nội dung"
+  },
+  {
+   "fieldname": "message_id",
+   "fieldtype": "Data",
+   "label": "Facebook Message ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_crm",
+   "fieldtype": "Section Break",
+   "label": "CRM"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Link",
+   "label": "CRM Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Trạng thái",
+   "options": "Mới\nĐã reply\nBỏ qua",
+   "default": "Mới",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_reply",
+   "fieldtype": "Section Break",
+   "label": "Reply"
+  },
+  {
+   "fieldname": "reply_text",
+   "fieldtype": "Long Text",
+   "label": "Nội dung reply"
+  },
+  {
+   "fieldname": "replied_at",
+   "fieldtype": "Datetime",
+   "label": "Thời gian reply"
+  },
+  {
+   "fieldname": "replied_by",
+   "fieldtype": "Link",
+   "label": "Người reply",
+   "options": "User"
+  }
+ ],
+ "links": [],
+ "modified": "2026-03-25 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Diginext FB CRM",
+ "name": "FB Message Log",
+ "naming_rule": "By fieldname",
+ "autoname": "field:message_id",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "read": 1,
+   "role": "Sales User",
+   "write": 1
+  }
+ ],
+ "sort_field": "received_at",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

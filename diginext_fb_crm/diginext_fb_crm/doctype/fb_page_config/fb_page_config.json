@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "creation": "2026-03-25 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "page_name",
+  "page_id",
+  "section_tokens",
+  "page_access_token",
+  "app_secret",
+  "verify_token",
+  "section_status",
+  "is_active",
+  "auto_create_lead"
+ ],
+ "fields": [
+  {
+   "fieldname": "page_name",
+   "fieldtype": "Data",
+   "label": "Tên Page",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "page_id",
+   "fieldtype": "Data",
+   "label": "Facebook Page ID",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_tokens",
+   "fieldtype": "Section Break",
+   "label": "Thông tin xác thực"
+  },
+  {
+   "fieldname": "page_access_token",
+   "fieldtype": "Password",
+   "label": "Page Access Token",
+   "reqd": 1
+  },
+  {
+   "fieldname": "app_secret",
+   "fieldtype": "Password",
+   "label": "App Secret"
+  },
+  {
+   "fieldname": "verify_token",
+   "fieldtype": "Data",
+   "label": "Verify Token (Webhook)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_status",
+   "fieldtype": "Section Break",
+   "label": "Cài đặt"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Đang hoạt động",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "auto_create_lead",
+   "fieldtype": "Check",
+   "label": "Tự động tạo CRM Lead khi có message mới",
+   "default": "1"
+  }
+ ],
+ "links": [],
+ "modified": "2026-03-25 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Diginext FB CRM",
+ "name": "FB Page Config",
+ "naming_rule": "By fieldname",
+ "autoname": "field:page_name",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
